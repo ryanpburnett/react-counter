@@ -3,7 +3,7 @@ import './counter.css';
 
 class Counter extends Component {
     state = { 
-        count: 1, 
+        count: 1
     };
 
     render() { 
