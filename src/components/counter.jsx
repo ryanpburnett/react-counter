@@ -3,7 +3,8 @@ import './counter.css';
 
 class Counter extends Component {
     state = { 
-        count: 1
+        count: 1,
+        list: ['Pancakes', 'Waffles', 'Churros']
     };
 
     render() { 
@@ -11,6 +12,9 @@ class Counter extends Component {
             <div>
                 <span className={this.getBadgeClasses()}>{this.formatCount()}</span>
                 <button className="space btn btn-primary">Increment</button>
+                <ul>
+                    {this.state.list.map(item => <li key={item}>{item}</li>)}
+                </ul>
             </div>
         );
     }
