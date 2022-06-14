@@ -11,12 +11,24 @@ class Counter extends Component {
         return (
             <div>
                 <span className={this.getBadgeClasses()}>{this.formatCount()}</span>
-                <button className="space btn btn-primary">Increment</button>
+                <button onClick={this.handleIncrement} className="space btn btn-primary">Increment</button>
                 <ul>
-                    {this.state.list.map(item => <li key={item}>{item}</li>)}
+                    {this.renderList()}
                 </ul>
             </div>
         );
+    }
+
+    handleIncrement() {
+        console.log('y\'all been incremented');
+    }
+
+    renderList() {
+        if (this.state.list.length === 0) {
+            return "No items in list";
+        }else{
+            return this.state.list.map(item => <li key={item}>{item}</li>)
+        }
     }
 
     getBadgeClasses() {
