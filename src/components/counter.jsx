@@ -11,7 +11,7 @@ class Counter extends Component {
         return (
             <div>
                 <span className={this.getBadgeClasses()}>{this.formatCount()}</span>
-                <button onClick={this.handleIncrement} className="space btn btn-primary">Increment</button>
+                <button onClick={this.handleIncrement} className="bisque space btn btn-primary">Increment</button>
                 <ul>
                     {this.renderList()}
                 </ul>
@@ -32,7 +32,7 @@ class Counter extends Component {
     }
 
     getBadgeClasses() {
-        let classes = "space badge ";
+        let classes = "bisque space badge ";
         classes += (this.state.count === 0) ? "badge-warning" : "badge-secondary";
         return classes;
     }
