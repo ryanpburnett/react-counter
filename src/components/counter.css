@@ -1,3 +1,11 @@
+body {
+    background-color: midnightblue;
+}
+
+p, li, button {
+    color: bisque;
+}
+
 .space {
     margin: 10px;
 }
