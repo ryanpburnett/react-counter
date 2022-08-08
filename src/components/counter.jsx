@@ -15,6 +15,7 @@ class Counter extends Component {
                 <span className={this.getBadgeClasses()}>{this.formatCount()}</span>
                 <button onClick={this.handleIncrement} className="bisque space btn btn-primary">Increment</button>
                 <button onClick={this.handleDecrement} className={this.getHandleDecrementClasses()}>Decrement</button>
+                <button onClick={this.addListItem} className="bisque space btn btn-primary">Add List Item</button>
                 <ul>
                     {this.renderList()}
                 </ul>
@@ -22,11 +23,25 @@ class Counter extends Component {
         );
     }
 
+    // badge
+    getBadgeClasses() {
+        let classes = "bisque space badge ";
+        classes += (this.state.count === 0) ? "badge-warning" : "badge-secondary";
+        return classes;
+    }
+
+    formatCount() {
+        const { count } = this.state;
+        return count === 0 ? 'Zero' : count;
+    }
+
+    // increment
     handleIncrement = () => {
         console.log('y\'all been incremented');
         this.setState({ count: this.state.count + 1 });
     }
 
+    // decrement
     handleDecrement = () => {
         if (this.state.count >= 1) {
             console.log('y\'all been decremented')
@@ -42,6 +57,7 @@ class Counter extends Component {
         return classes;
     }
 
+    // list
     renderList() {
         let { breakfast } = this.state;
         if (breakfast.length === 0) {
@@ -51,16 +67,10 @@ class Counter extends Component {
         }
     }
 
-    getBadgeClasses() {
-        let classes = "bisque space badge ";
-        classes += (this.state.count === 0) ? "badge-warning" : "badge-secondary";
-        return classes;
+    addListItem = item => {
+        console.log("item added lol")
     }
 
-    formatCount() {
-        const { count } = this.state;
-        return count === 0 ? 'Zero' : count;
-    }
 }
  
 export default Counter;
