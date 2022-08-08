@@ -14,7 +14,7 @@ class Counter extends Component {
                 <br />
                 <span className={this.getBadgeClasses()}>{this.formatCount()}</span>
                 <button onClick={this.handleIncrement} className="bisque space btn btn-primary">Increment</button>
-                <button onClick={this.handleDecrement} className="bisque space btn btn-secondary">Decrement</button>
+                <button onClick={this.handleDecrement} className={this.getHandleDecrementClasses()}>Decrement</button>
                 <ul>
                     {this.renderList()}
                 </ul>
@@ -34,6 +34,12 @@ class Counter extends Component {
         }else{
             console.log('ain\'t no decrementing for you, cowboy');
         }
+    }
+
+    getHandleDecrementClasses() {
+        let classes = "bisque space btn ";
+        this.state.count >= 1 ? classes += "btn-secondary" : classes += "btn-disabled";
+        return classes;
     }
 
     renderList() {
