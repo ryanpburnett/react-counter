@@ -12,6 +12,7 @@ class Counter extends Component {
             <div>
                 <span className={this.getBadgeClasses()}>{this.formatCount()}</span>
                 <button onClick={this.handleIncrement} className="bisque space btn btn-primary">Increment</button>
+                <button onClick={this.handleDecrement} className="bisque space btn btn-secondary">Decrement</button>
                 <ul>
                     {this.renderList()}
                 </ul>
@@ -21,7 +22,16 @@ class Counter extends Component {
 
     handleIncrement = () => {
         console.log('y\'all been incremented');
-        this.setState({ count: this.state.count + 1 })
+        this.setState({ count: this.state.count + 1 });
+    }
+
+    handleDecrement = () => {
+        if (this.state.count >= 1) {
+            console.log('y\'all been decremented')
+            this.setState({ count: this.state.count - 1 });
+        }else{
+            console.log('ain\'t no decrementing for you, cowboy');
+        }
     }
 
     renderList() {
