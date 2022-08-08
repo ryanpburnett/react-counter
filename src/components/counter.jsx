@@ -4,7 +4,7 @@ import './counter.css';
 class Counter extends Component {
     state = { 
         count: 1,
-        list: ['Pancakes', 'Waffles', 'Churros']
+        breakfast: ['Pancakes', 'Waffles', 'Churros']
     };
 
     render() { 
@@ -24,10 +24,11 @@ class Counter extends Component {
     }
 
     renderList() {
-        if (this.state.list.length === 0) {
-            return "No items in list";
+        let { breakfast } = this.state;
+        if (breakfast.length === 0) {
+            return <p>No items in list</p>;
         }else{
-            return this.state.list.map(item => <li key={item}>{item}</li>)
+            return breakfast.map(item => <li key={item}>{item}</li>)
         }
     }
 
