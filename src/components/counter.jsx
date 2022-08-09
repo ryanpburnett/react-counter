@@ -4,9 +4,9 @@ import './counter.css';
 class Counter extends Component {
     state = { 
         count: 1,
-        breakfast: ['Pancakes', 'Waffles', 'Churros']
+        breakfast: ['Pancakes', 'Waffles', 'Churros'],
     };
-
+    
     render() { 
         return (
             <div>
@@ -30,18 +30,18 @@ class Counter extends Component {
         classes += (this.state.count === 0) ? "badge-warning" : "badge-secondary";
         return classes;
     }
-
+    
     formatCount() {
         const { count } = this.state;
         return count === 0 ? 'Zero' : count;
     }
-
+    
     // increment
     handleIncrement = () => {
         console.log('y\'all been incremented');
         this.setState({ count: this.state.count + 1 });
     }
-
+    
     // decrement
     handleDecrement = () => {
         if (this.state.count >= 1) {
@@ -51,13 +51,13 @@ class Counter extends Component {
             console.log('ain\'t no decrementing for you, cowboy');
         }
     }
-
+    
     getHandleDecrementClasses() {
         let classes = "bisque space btn ";
         this.state.count >= 1 ? classes += "btn-danger" : classes += "btn-secondary";
         return classes;
     }
-
+    
     // list
     renderList() {
         let { breakfast } = this.state;
@@ -67,11 +67,17 @@ class Counter extends Component {
             return breakfast.map(item => <li key={item}>{item}</li>);
         }
     }
-
+    
     addListItem = () => {
         console.log("item added lol");
+        // the remainder of the code in this method needs refactoring- perhaps use this.setState()?
+        let addItemInput = document.getElementById("addItemInput").value;
+        let { breakfast } = this.state;
+
+        breakfast.push(addItemInput);
+        this.renderList();
     }
 
 }
- 
+
 export default Counter;
