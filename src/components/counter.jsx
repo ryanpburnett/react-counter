@@ -10,7 +10,7 @@ class Counter extends Component {
     render() { 
         return (
             <div>
-                <img src="./favicon.ico" alt="logo" />
+                <img src="./favicon.ico" alt="logo" className="space"/>
                 <br />
                 <span className={this.getBadgeClasses()}>{this.formatCount()}</span>
                 <button onClick={this.handleIncrement} className="bisque space btn btn-primary">Increment</button>
