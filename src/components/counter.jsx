@@ -1,3 +1,5 @@
+// break this into multiple components
+
 import React, { Component } from 'react';
 import './counter.css';
 
@@ -75,7 +77,7 @@ class Counter extends Component {
         let addItemInput = document.getElementById("addItemInput");
         let { breakfast } = this.state;
         console.log(addItemInput.value);
-        breakfast.push(addItemInput.value);
+        addItemInput.value !== "" ? breakfast.push(addItemInput.value) : alert("List item can't be blank");
         addItemInput.value = "";
         this.renderList();
     }
