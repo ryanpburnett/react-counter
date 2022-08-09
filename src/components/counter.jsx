@@ -16,6 +16,7 @@ class Counter extends Component {
                 <button onClick={this.handleIncrement} className="bisque space btn btn-primary">Increment</button>
                 <button onClick={this.handleDecrement} className={this.getHandleDecrementClasses()}>Decrement</button>
                 <button onClick={this.addListItem} className="bisque space btn btn-primary">Add List Item</button>
+                <input id="addItemInput" type="text" />
                 <ul>
                     {this.renderList()}
                 </ul>
@@ -67,7 +68,7 @@ class Counter extends Component {
         }
     }
 
-    addListItem = item => {
+    addListItem = () => {
         console.log("item added lol");
     }
 
