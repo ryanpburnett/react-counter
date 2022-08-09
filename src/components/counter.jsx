@@ -44,7 +44,7 @@ class Counter extends Component {
     // decrement
     handleDecrement = () => {
         if (this.state.count >= 1) {
-            console.log('y\'all been decremented')
+            console.log('y\'all been decremented');
             this.setState({ count: this.state.count - 1 });
         }else{
             console.log('ain\'t no decrementing for you, cowboy');
@@ -63,12 +63,12 @@ class Counter extends Component {
         if (breakfast.length === 0) {
             return <p>No items in list</p>;
         }else{
-            return breakfast.map(item => <li key={item}>{item}</li>)
+            return breakfast.map(item => <li key={item}>{item}</li>);
         }
     }
 
     addListItem = item => {
-        console.log("item added lol")
+        console.log("item added lol");
     }
 
 }
