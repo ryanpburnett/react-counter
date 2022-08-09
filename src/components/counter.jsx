@@ -72,11 +72,11 @@ class Counter extends Component {
     addListItem = () => {
         console.log("item added lol");
         // the remainder of the code in this method needs refactoring- perhaps use this.setState()?
-        let addItemInput = document.getElementById("addItemInput").value;
+        let addItemInput = document.getElementById("addItemInput");
         let { breakfast } = this.state;
-        console.log(addItemInput);
-        breakfast.push(addItemInput);
-        addItemInput = "";
+        console.log(addItemInput.value);
+        breakfast.push(addItemInput.value);
+        addItemInput.value = "";
         this.renderList();
     }
 
