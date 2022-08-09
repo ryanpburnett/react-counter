@@ -54,7 +54,7 @@ class Counter extends Component {
 
     getHandleDecrementClasses() {
         let classes = "bisque space btn ";
-        this.state.count >= 1 ? classes += "btn-secondary" : classes += "btn-disabled";
+        this.state.count >= 1 ? classes += "btn-danger" : classes += "btn-secondary";
         return classes;
     }
 
