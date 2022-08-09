@@ -64,7 +64,8 @@ class Counter extends Component {
         if (breakfast.length === 0) {
             return <p>No items in list</p>;
         }else{
-            return breakfast.map(item => <li key={item}>{item}</li>);
+            let key = 0;
+            return breakfast.map(item => <li key={key++}>{item}</li>);
         }
     }
     
@@ -75,6 +76,7 @@ class Counter extends Component {
         let { breakfast } = this.state;
 
         breakfast.push(addItemInput);
+        addItemInput = "";
         this.renderList();
     }
 
