@@ -32,10 +32,12 @@ class Header extends Component {
         atom.style.rotate = "0deg";
         oops.innerText = "whew...";
         button.style.display = "none";
+        setInterval(
+            function() {
+                oops.style.display = "none"
+            }, 3000
+        )
     }
-
-
-
 }
 
 export default Header;
