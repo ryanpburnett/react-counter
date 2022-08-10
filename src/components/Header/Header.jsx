@@ -8,7 +8,7 @@ class Header extends Component {
             <div>
                 <img src="./favicon.ico" alt="logo" id="atom" className="headerSpace" onMouseOver={this.break}/>
                 <p id="oops"></p>
-                <button id="button" className="btn-warning headerSpace" onClick={this.fix}>fix</button>
+                <button id="headerButton" className="btn-warning headerSpace" onClick={this.fix}>fix</button>
             </div>
         );
     }
@@ -16,7 +16,7 @@ class Header extends Component {
     break() {
         let atom = document.getElementById("atom");
         let oops = document.getElementById("oops");
-        let button = document.getElementById("button");
+        let button = document.getElementById("headerButton");
 
         atom.style.rotate = "20deg";
         oops.style.display = "inline";
@@ -27,7 +27,7 @@ class Header extends Component {
     fix() {
         let atom = document.getElementById("atom");
         let oops = document.getElementById("oops");
-        let button = document.getElementById("button");
+        let button = document.getElementById("headerButton");
 
         atom.style.rotate = "0deg";
         oops.innerText = "whew...";

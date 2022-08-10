@@ -6,11 +6,13 @@ import reportWebVitals from './reportWebVitals';
 import "bootstrap/dist/css/bootstrap.css";
 import Counter from './components/Counter/Counter';
 import Header from './components/Header/Header';
+import List from './components/List/List';
 
 ReactDOM.render(
   <React.StrictMode>
     <Header />
     <Counter />
+    <List />
   </React.StrictMode>,
   document.getElementById('root')
 );
