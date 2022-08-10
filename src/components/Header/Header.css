@@ -5,3 +5,8 @@
 #oops {
     display: none;
 }
+
+button {
+    float: right;
+    display: none;
+}
