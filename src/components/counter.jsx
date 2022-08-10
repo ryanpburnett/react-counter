@@ -7,6 +7,7 @@ class Counter extends Component {
     state = { 
         count: 1,
         breakfast: ['Pancakes', 'Waffles', 'Churros'],
+        log: 'logamundo'
     };
     
     render() { 
@@ -16,7 +17,7 @@ class Counter extends Component {
                 <br />
                 <span className={this.getBadgeClasses()}>{this.formatCount()}</span>
                 {/* the handleIncrement function is done this way just to test out passing a parameter */}
-                <button onClick={() => this.handleIncrement('logamundo')} className="bisque space btn btn-primary">Increment</button>
+                <button onClick={() => this.handleIncrement(this.state.log)} className="bisque space btn btn-primary">Increment</button>
                 <button onClick={this.handleDecrement} className={this.getHandleDecrementClasses()}>Decrement</button>
                 <button onClick={this.addListItem} className="bisque space btn btn-primary">Add List Item</button>
                 <input id="addItemInput" type="text" />
