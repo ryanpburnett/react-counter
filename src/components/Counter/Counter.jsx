@@ -1,7 +1,5 @@
-// break this into multiple components
-
 import React, { Component } from 'react';
-import './counter.css';
+import './Counter.css';
 
 class Counter extends Component {
     state = { 
@@ -13,8 +11,6 @@ class Counter extends Component {
     render() { 
         return (
             <div>
-                <img src="./favicon.ico" alt="logo" className="space"/>
-                <br />
                 <span className={this.getBadgeClasses()}>{this.formatCount()}</span>
                 {/* the handleIncrement function is done this way just to test out passing a parameter */}
                 <button onClick={() => this.handleIncrement(this.state.log)} className="bisque space btn btn-primary">Increment</button>
