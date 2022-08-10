@@ -15,7 +15,8 @@ class Counter extends Component {
                 <img src="./favicon.ico" alt="logo" className="space"/>
                 <br />
                 <span className={this.getBadgeClasses()}>{this.formatCount()}</span>
-                <button onClick={this.handleIncrement} className="bisque space btn btn-primary">Increment</button>
+                {/* the handleIncrement function is done this way just to test out passing a parameter */}
+                <button onClick={() => this.handleIncrement('logamundo')} className="bisque space btn btn-primary">Increment</button>
                 <button onClick={this.handleDecrement} className={this.getHandleDecrementClasses()}>Decrement</button>
                 <button onClick={this.addListItem} className="bisque space btn btn-primary">Add List Item</button>
                 <input id="addItemInput" type="text" />
@@ -39,8 +40,9 @@ class Counter extends Component {
     }
     
     // increment
-    handleIncrement = () => {
+    handleIncrement = (log) => {
         console.log('y\'all been incremented');
+        console.log(log)
         this.setState({ count: this.state.count + 1 });
     }
     
