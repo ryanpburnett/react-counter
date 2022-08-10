@@ -76,13 +76,14 @@ class Counter extends Component {
     
     addListItem = () => {
         console.log("item added lol");
-        // the remainder of the code in this method needs refactoring- perhaps use this.setState()?
+
         let addItemInput = document.getElementById("addItemInput");
         let { breakfast } = this.state;
-        console.log(addItemInput.value);
-        addItemInput.value !== "" ? breakfast.push(addItemInput.value) : alert("List item can't be blank");
+        let newBreakfast = breakfast;
+
+        addItemInput.value !== "" ? newBreakfast.push(addItemInput.value) : alert("List item can't be blank");
         addItemInput.value = "";
-        this.renderList();
+        this.setState({breakfast: newBreakfast});
     }
 
 }
