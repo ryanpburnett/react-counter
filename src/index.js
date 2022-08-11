@@ -4,15 +4,18 @@ import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 import "bootstrap/dist/css/bootstrap.css";
-import Counters from './components/Counters/Counters';
+
 import Header from './components/Header/Header';
+import Counters from './components/Counters/Counters';
 import List from './components/List/List';
+import Footer from './components/Footer/Footer';
 
 ReactDOM.render(
   <React.StrictMode>
     <Header />
     <Counters />
     <List />
+    <Footer />
   </React.StrictMode>,
   document.getElementById('root')
 );

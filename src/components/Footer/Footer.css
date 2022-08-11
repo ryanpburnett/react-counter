@@ -1,0 +1,11 @@
+.space {
+    margin: 10px;
+}
+
+#sig {
+    float: right;
+    font-family: 'Courier New', Courier, monospace;
+    color: black;
+    font-size: 30px;
+    font-weight: bold;
+}
