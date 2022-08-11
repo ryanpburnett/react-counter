@@ -14,9 +14,10 @@ class Counters extends Component {
     render() { 
         return (
             <div>
-                { this.state.counters.map(counter => 
+                { this.state.counters.map(counter => (
                     // "key" is reserved for React, and "value" and "selected" are props passed to the child Counter component
-                    <Counter key={counter.id} value={counter.value} selected={true} />)}
+                    <Counter key={counter.id} value={counter.value} selected={true} />
+                ))}
             </div>
         );
     }
