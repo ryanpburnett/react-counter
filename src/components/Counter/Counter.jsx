@@ -3,7 +3,8 @@ import './Counter.css';
 
 class Counter extends Component {
     state = { 
-        count: 1,
+        // passing "value" from parent Counters component
+        value: this.props.value,
         log: 'logamundo'
     };
     
@@ -21,27 +22,27 @@ class Counter extends Component {
     // badge
     getBadgeClasses() {
         let classes = "bisque space badge ";
-        classes += (this.state.count === 0) ? "badge-warning" : "badge-secondary";
+        classes += (this.state.value === 0) ? "badge-warning" : "badge-secondary";
         return classes;
     }
     
     formatCount() {
-        const { count } = this.state;
-        return count === 0 ? 'Zero' : count;
+        const { value } = this.state;
+        return value === 0 ? 'Zero' : value;
     }
     
     // increment
     handleIncrement = (log) => {
         console.log('y\'all been incremented');
         console.log(log)
-        this.setState({ count: this.state.count + 1 });
+        this.setState({ value: this.state.value + 1 });
     }
     
     // decrement
     handleDecrement = () => {
-        if (this.state.count >= 1) {
+        if (this.state.value >= 1) {
             console.log('y\'all been decremented');
-            this.setState({ count: this.state.count - 1 });
+            this.setState({ value: this.state.value - 1 });
         }else{
             console.log('ain\'t no decrementing for you, cowboy');
         }
@@ -49,7 +50,7 @@ class Counter extends Component {
     
     getHandleDecrementClasses() {
         let classes = "bisque space btn ";
-        this.state.count >= 1 ? classes += "btn-danger" : classes += "btn-secondary";
+        this.state.value >= 1 ? classes += "btn-danger" : classes += "btn-secondary";
         return classes;
     }
 }
