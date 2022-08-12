@@ -9,3 +9,8 @@ p, li, button, .bisque{
 .space {
     margin: 10px;
 }
+
+/* this is to keep the numbers of each counter closer to the counter itself */
+p {
+    margin-bottom: 0;
+}

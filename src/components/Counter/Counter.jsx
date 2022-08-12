@@ -11,6 +11,8 @@ class Counter extends Component {
     render() { 
         return (
             <div>
+                {/* this is being used to bring in props from the Counters component */}
+                {this.props.children}  
                 <span className={this.getBadgeClasses()}>{this.formatCount()}</span>
                 {/* the handleIncrement function is done this way just to test out passing a parameter */}
                 <button onClick={() => this.handleIncrement(this.state.log)} className="bisque space btn btn-primary">Increment</button>
