@@ -35,7 +35,7 @@ class Header extends Component {
         setTimeout(
             function() {
                 oops.style.display = "none"
-            }, 3000
+            }, 1500
         )
     }
 }
