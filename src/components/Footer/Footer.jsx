@@ -3,13 +3,13 @@ import './Footer.css';
 
 class Footer extends Component {
     state = {
-
+        signature: '-RPB'
     } 
 
     render() { 
         return (
             <div>
-                <p id="sig" className='space'>-RPB</p>
+                <p id="sig" className='space'>{this.state.signature}</p>
             </div>
         );
     }
