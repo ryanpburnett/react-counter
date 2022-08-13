@@ -17,6 +17,7 @@ class Counter extends Component {
                 {/* the handleIncrement function is done this way just to test out passing a parameter */}
                 <button onClick={() => this.handleIncrement(this.state.log)} className="bisque space btn btn-primary">Increment</button>
                 <button onClick={this.handleDecrement} className={this.getHandleDecrementClasses()}>Decrement</button>
+                <button onClick={this.props.onDelete} className="space btn btn-sm btn-danger">BOOM</button>
             </div>
         );
     }
@@ -52,7 +53,7 @@ class Counter extends Component {
     
     getHandleDecrementClasses() {
         let classes = "bisque space btn ";
-        this.state.value >= 1 ? classes += "btn-danger" : classes += "btn-secondary";
+        this.state.value >= 1 ? classes += "btn-info" : classes += "btn-secondary";
         return classes;
     }
 }
