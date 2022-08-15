@@ -12,8 +12,9 @@ class Counters extends Component {
         ]
     }
 
-    handleDelete = () => {
-        console.log('delete handled');
+    handleDelete = (counterId) => {
+        console.log('delete handled', counterId);
+
     }
 
     render() { 
@@ -21,7 +22,11 @@ class Counters extends Component {
             <div>
                 { this.state.counters.map(counter => (
                     // "key" is reserved for React, and "value" and "onDelete" are props passed to the child Counter component
-                    <Counter key={counter.id} value={counter.value} onDelete={this.handleDelete}>
+                    <Counter 
+                        key={counter.id} 
+                        id={counter.id} 
+                        value={counter.value} 
+                        onDelete={this.handleDelete}>
                         {/* when content is rendered in the component, it is passed to the child through props */}
                         <p>#{counter.id}</p>
                         <p>-----------------------------------------------------------------------------------</p>

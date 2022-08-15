@@ -12,12 +12,20 @@ class Counter extends Component {
         return (
             <div>
                 {/* this is being used to bring in props from the Counters component */}
+                {console.log(this.props)}
                 {this.props.children[0]}  
-                <span className={this.getBadgeClasses()}>{this.formatCount()}</span>
+                <span 
+                    className={this.getBadgeClasses()}>{this.formatCount()}</span>
                 {/* the handleIncrement function is done this way just to test out passing a parameter */}
-                <button onClick={() => this.handleIncrement(this.state.log)} className="bisque space btn btn-primary">Increment</button>
-                <button onClick={this.handleDecrement} className={this.getHandleDecrementClasses()}>Decrement</button>
-                <button onClick={this.props.onDelete} className="space btn btn-sm btn-danger">BOOM</button>
+                <button 
+                    onClick={() => this.handleIncrement(this.state.log)} 
+                    className="bisque space btn btn-primary">Increment</button>
+                <button 
+                    onClick={this.handleDecrement} 
+                    className={this.getHandleDecrementClasses()}>Decrement</button>
+                <button 
+                    onClick={() => this.props.onDelete(this.props.id)} 
+                    className="space btn btn-sm btn-danger">BOOM</button>
                 {this.props.children[1]} 
             </div>
         );
