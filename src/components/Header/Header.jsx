@@ -9,6 +9,7 @@ class Header extends Component {
                 <img src="./favicon.ico" alt="logo" id="atom" className="headerSpace" onMouseOver={this.break}/>
                 <p id="oops"></p>
                 <button id="headerButton" className="btn-warning headerSpace" onClick={this.fix}>fix</button>
+                <p>-----------------------------------------------------------------------------------</p>
             </div>
         );
     }
