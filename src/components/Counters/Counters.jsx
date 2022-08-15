@@ -14,7 +14,10 @@ class Counters extends Component {
 
     handleDelete = (counterId) => {
         console.log('delete handled', counterId);
-
+        const counters = this.state.counters.filter(counter => counter.id !== counterId);
+        // setting the counters array in state with the counters const in this method.
+        // key and value are the same name, so the value is omitted.
+        this.setState({counters})
     }
 
     render() { 
