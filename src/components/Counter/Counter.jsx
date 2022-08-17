@@ -6,7 +6,7 @@ class Counter extends Component {
         // passing "value" from parent Counters component
         value: this.props.value,
         log: 'logamundo'
-    };
+    }
     
     render() { 
         return (
@@ -45,7 +45,7 @@ class Counter extends Component {
     // increment
     handleIncrement = (log) => {
         console.log('y\'all been incremented');
-        console.log(log)
+        console.log(log);
         this.setState({ value: this.state.value + 1 });
     }
     

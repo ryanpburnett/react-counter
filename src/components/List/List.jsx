@@ -4,7 +4,7 @@ import './List.css';
 class List extends Component {
     state = { 
         breakfast: ['Pancakes', 'Waffles', 'Churros'],
-    };
+    }
     
     render() { 
         return (

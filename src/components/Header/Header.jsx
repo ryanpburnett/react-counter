@@ -21,7 +21,7 @@ class Header extends Component {
 
         atom.style.rotate = "20deg";
         oops.style.display = "inline";
-        oops.innerText = "You knocked it over!"
+        oops.innerText = "You knocked it over!";
         button.style.display = "inline";
     }
 
@@ -35,9 +35,9 @@ class Header extends Component {
         button.style.display = "none";
         setTimeout(
             function() {
-                oops.style.display = "none"
+                oops.style.display = "none";
             }, 1500
-        )
+        );
     }
 }
 
