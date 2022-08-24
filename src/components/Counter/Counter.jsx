@@ -4,7 +4,7 @@ import './Counter.css';
 class Counter extends Component {
     state = { 
         // passing "value" from parent Counters component
-        value: this.props.value,
+        value: this.props.counter.value,
         log: 'logamundo'
     }
     
@@ -23,7 +23,7 @@ class Counter extends Component {
                     onClick={this.handleDecrement} 
                     className={this.getHandleDecrementClasses()}>Decrement</button>
                 <button 
-                    onClick={() => this.props.onDelete(this.props.id)} 
+                    onClick={() => this.props.onDelete(this.props.counter.id)} 
                     className="space btn btn-sm btn-danger">BOOM</button>
                 {this.props.children[1]} 
             </div>

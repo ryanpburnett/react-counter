@@ -27,8 +27,10 @@ class Counters extends Component {
                     // "key" is reserved for React, and "value" and "onDelete" are props passed to the child Counter component
                     <Counter 
                         key={counter.id} 
-                        id={counter.id} 
-                        value={counter.value} 
+                        // commented out is one way of doing this; a more terse way of doing this is passing the counter object
+                        // id={counter.id} 
+                        // value={counter.value} 
+                        counter={ counter }
                         onDelete={this.handleDelete}>
                         {/* when content is rendered in the component, it is passed to the child through props */}
                         <p>#{counter.id}</p>
