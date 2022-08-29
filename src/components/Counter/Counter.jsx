@@ -32,7 +32,7 @@ class Counter extends Component {
 
     // badge
     getBadgeClasses() {
-        let classes = "bisque space badge ";
+        let classes = "col-1 bisque space badge ";
         classes += (this.state.value === 0) ? "badge-warning" : "badge-secondary";
         return classes;
     }
