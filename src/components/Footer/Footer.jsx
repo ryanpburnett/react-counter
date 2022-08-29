@@ -1,18 +1,13 @@
-import React, { Component } from 'react';
+import React from 'react';
 import './Footer.css';
 
-class Footer extends Component {
-    state = {
-        signature: '-RPB'
-    } 
-
-    render() { 
+    const Footer = () => { 
         return (
             <div>
-                <p id="sig" className='space'>{this.state.signature}</p>
+                <p id="sig" className='space'>-RPB</p>
             </div>
         );
     }
-}
+
  
 export default Footer;
