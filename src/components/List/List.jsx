@@ -37,7 +37,7 @@ class List extends Component {
 
         addItemInput.value !== "" ? breakfast.push(addItemInput.value) : alert("List item can't be blank");
         addItemInput.value = "";
-        this.setState({ breakfast} );
+        this.setState({ breakfast });
     }
 
 }
