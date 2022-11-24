@@ -34,11 +34,10 @@ class List extends Component {
 
         let addItemInput = document.getElementById("addItemInput");
         let { breakfast } = this.state;
-        let newBreakfast = breakfast;
 
-        addItemInput.value !== "" ? newBreakfast.push(addItemInput.value) : alert("List item can't be blank");
+        addItemInput.value !== "" ? breakfast.push(addItemInput.value) : alert("List item can't be blank");
         addItemInput.value = "";
-        this.setState({breakfast: newBreakfast});
+        this.setState({ breakfast} );
     }
 
 }
